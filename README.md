@@ -103,5 +103,48 @@ Copy
 Edit
 tensorboard --logdir=logs/fit
 
-Then open your browser and go to: http://localhost:6006
+4. Training Analysis Report
+
+ 1. Observations from Training and Validation Accuracy Curves
+
+- In the **early epochs**, both training and validation accuracy typically increase.
+- As training progresses:
+  - **Training accuracy** often continues to rise.
+  - **Validation accuracy** may **plateau** or even **decline**.
+- A **divergence** between training and validation accuracy is a common sign of **overfitting**.
+- When overfitting occurs:
+  - Training loss decreases.
+  - Validation loss increases or fluctuates.
+
+ 2. Using TensorBoard to Detect Overfitting
+
+- Open TensorBoard and navigate to the **Scalars** tab.
+- Monitor:
+  - `accuracy` and `val_accuracy`
+  - `loss` and `val_loss`
+- **Signs of overfitting:**
+  - A wide gap between training and validation metrics.
+  - Validation accuracy stops improving while training accuracy rises.
+- Additional TensorBoard features:
+  - Use **Histograms** to observe changes in weight distributions.
+  - Monitor learning rate schedules and other custom metrics if logged.
+
+ 3. Effects of Increasing the Number of Epochs
+
+- Initially:
+  - More epochs = better learning and improved accuracy.
+- After a certain point:
+  - **Training accuracy continues to improve**, but
+  - **Validation accuracy may drop**, indicating overfitting.
+- Best Practices:
+  - Use `EarlyStopping` to stop training when validation performance degrades.
+  - Implement regularization techniques such as:
+    - Dropout
+    - L2 Regularization
+    - Data Augmentation
+
+---
+
+
+
 
