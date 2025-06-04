@@ -1,4 +1,6 @@
 # assignment
+# J.Pawan Kalyan
+# 700776779
 1.Tensor Manipulations & Reshaping (TensorFlow)
 This mini-project demonstrates how to manipulate tensors in TensorFlow using reshaping, transposing, and broadcasting techniques.
 Objective:Perform basic tensor operations using TensorFlow.
